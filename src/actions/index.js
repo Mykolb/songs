@@ -1,8 +1,5 @@
+
 //action
-export const selectSong = 'SELECT_SONG';
-
-
-
 
 
 //Action creator
