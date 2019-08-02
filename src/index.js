@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import App from './components/App';
+import 'semantic-ui-css/semantic.min.css';
 import "./styles.css";
+import reducers  from './reducers';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+
+ReactDOM.render(
+<Provider store={createStore(reducers)}>
+<App />
+</Provider>,
+ document.getElementById("root")
+);
